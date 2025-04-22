@@ -91,3 +91,10 @@ body {
     flex: 1 1 40%;
   }
   
+.edu-entry, .job {
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
