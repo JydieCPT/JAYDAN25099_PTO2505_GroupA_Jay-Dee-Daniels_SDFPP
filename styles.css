@@ -73,3 +73,21 @@ body {
     border-radius: 20px;
     font-size: 14px;
   }
+
+.projects, .education, .experience {
+    margin-top: 30px;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .project {
+    background: #eef3f1;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 40%;
+  }
+  
