@@ -1,109 +1,154 @@
 body {
-  background: #4a4a4a;                
-  font-family: Arial, sans-serif;
-  background: #5e5e5e;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: #DADADA;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.profile-info h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.skills-section {
+    background: #4a4a4a;                
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #DADADA;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .profile {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    align-items: center;
     gap: 20px;
+    background: #ffffff; /* White background */
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 3px #dadada; /* Subtle shadow */
   }
   
-  .proficiency, .skills {
-    width: 48%;
+  .profile-photo {
+    width: 144px;
+    height: 144px;
+    border-radius: 24px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Keeps 1:1 ratio */
   }
   
-  .bar-label {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .bar {
-    background: #ddd;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .fill {
-    background: #3b7e69;
-    height: 100%;
-  }
-  
-  .tags {
+  .profile-info {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
   }
   
-  .tags span {
-    background: #e0f0e9;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-  }
-
-.projects, .education, .experience {
-    margin-top: 30px;
+  .profile-info h1 {
+    margin: 0 0 16px 0; /* 16px bottom margin */
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000;
+    text-align: left;
   }
   
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  .profile-info p {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 24px;
+    max-width: 520px;
   }
   
-  .project {
-    background: #eef3f1;
-    padding: 15px;
-    border-radius: 10px;
-    flex: 1 1 40%;
-  }
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   
-.edu-entry, .job {
-    background: #f3f3f3;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-
-.footer {
-    background: #dc5d2e;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 10px;
-  }
-
+    .profile-photo {
+      width: 96px;
+      height: 96px;
+    }
+  
+    .profile-info h1 {
+      font-size: 18px;
+    }
+  
+    .profile-info p {
+      font-size: 14px;
+    }
+  }  
+  
+  .skills-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    
+    .proficiency, .skills {
+      width: 48%;
+    }
+    
+    .bar-label {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    
+    .bar {
+      background: #ddd;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .fill {
+      background: #3b7e69;
+      height: 100%;
+    }
+    
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .tags span {
+      background: #e0f0e9;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+  
+  .projects, .education, .experience {
+      margin-top: 30px;
+    }
+    
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .project {
+      background: #eef3f1;
+      padding: 15px;
+      border-radius: 10px;
+      flex: 1 1 40%;
+    }
+    
+  .edu-entry, .job {
+      background: #f3f3f3;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  
+  .footer {
+      background: #dc5d2e;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
