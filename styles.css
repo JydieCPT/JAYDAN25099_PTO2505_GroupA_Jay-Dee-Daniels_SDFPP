@@ -116,6 +116,52 @@ body {
     width: 0; /* Set width dynamically in HTML or with inline style */
     border-radius: 3px;
   }
+
+  .skills-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .proficiency, .skills {
+    width: 48%;
+  }
+  
+  /* Skill tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tags span {
+    background: #ECF4F1; /* Light green pill */
+    padding: 8px 14px; /* Vertical and horizontal padding */
+    border-radius: 6px; /* Pill shape */
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500; /* Medium weight */
+    color: #000;
+    text-align: center;
+    letter-spacing: 2px; /* 2px letter spacing */
+  }
+  
+  /* Responsive stacking */
+  @media (max-width: 640px) {
+    .skills-section {
+      flex-direction: column;
+      gap: 20px; /* 20px gap between stacked sections */
+    }
+  
+    .proficiency, .skills {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .bar {
+      width: 100%; /* Make bars expand to full width */
+    }
+  }  
   
     .tags {
       display: flex;
