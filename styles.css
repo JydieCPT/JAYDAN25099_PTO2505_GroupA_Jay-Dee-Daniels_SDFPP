@@ -180,18 +180,90 @@ body {
       margin-top: 30px;
     }
     
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .project {
-      background: #eef3f1;
-      padding: 15px;
-      border-radius: 10px;
-      flex: 1 1 40%;
-    }
+    .projects {
+        margin-top: 30px;
+      }
+      
+      .project-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      
+      .project {
+        width: 240px;
+        height: 360px;
+        background: #ffffff;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 0 2px #dadada;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      
+      .project.highlighted {
+        background: #2E6E5B; /* Dark green for highlighted */
+        color: #ffffff;
+      }
+      
+      /* Heart Icon */
+      .project .heart-icon {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        fill: #cccccc; /* Default inactive */
+        cursor: pointer;
+      }
+      
+      .project .heart-icon.active {
+        fill: #D9534F; /* Active favorite */
+      }
+      
+      /* Project Title */
+      .project-name {
+        font-family: 'Inter', Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: #000000; /* Black for normal cards */
+      }
+      
+      .project.highlighted .project-name {
+        color: #ffffff; /* White for highlighted */
+      }
+      
+      /* Project Details (Brief, Tech, Responsibilities) */
+      .project p {
+        font-family: 'Inter', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: #4A4A4A;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .project.highlighted p {
+        color: #ffffff; /* White for highlighted */
+      }
+      
+      /* Responsive layout */
+      @media (max-width: 640px) {
+        .project-list {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      
+        .project {
+          width: 100%;
+          height: auto;
+          padding: 16px;
+        }
+      }
+      
     
   .edu-entry, .job {
       background: #f3f3f3;
