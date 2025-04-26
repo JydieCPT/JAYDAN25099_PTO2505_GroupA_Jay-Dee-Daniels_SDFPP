@@ -80,33 +80,43 @@ body {
   }  
   
   .skills-section {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 30px;
-      gap: 20px;
-    }
-    
-    .proficiency, .skills {
-      width: 48%;
-    }
-    
-    .bar-label {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-    
-    .bar {
-      background: #ddd;
-      height: 10px;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-    
-    .fill {
-      background: #3b7e69;
-      height: 100%;
-    }
-    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .proficiency {
+    background: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 2px #dadada; /* Subtle shadow */
+  }
+  
+  .bar-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 12px; /* 12px space below each label */
+    text-align: left;
+  }
+  
+  .bar {
+    background: #ddd;
+    height: 6px; /* New height */
+    border-radius: 3px; /* Rounded corners */
+    overflow: hidden;
+    margin-bottom: 20px; /* Extra space after each bar+label group */
+  }
+  
+  .fill {
+    background: #396B5E; /* Dark green fill */
+    height: 100%;
+    width: 0; /* Set width dynamically in HTML or with inline style */
+    border-radius: 3px;
+  }
+  
     .tags {
       display: flex;
       flex-wrap: wrap;
