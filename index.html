@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     @layer utilities {
       .rounded-6 { border-radius: 6px; }
@@ -14,19 +15,16 @@
     }
   </style>
 </head>
-<body
-  class="min-h-screen bg-fixed bg-center bg-cover"
-  style="background-image: url('images/background.png');"
->
+
+<body class="min-h-screen bg-fixed bg-center bg-cover" style="background-image: url('images/background.png');">
+
   <div class="max-w-[1200px] mx-auto px-6 py-10 space-y-10">
 
     <!-- PROFILE -->
     <section class="flex flex-col sm:flex-row items-center bg-white p-6 rounded-12 shadow-light gap-6">
-      <img src="images/profile-photo.jpg"
-           alt="Profile"
-           class="w-[144px] h-[144px] aspect-square rounded-24 object-cover"/>
+      <img src="images/profile-photo.jpg" alt="Profile" class="w-[144px] h-[144px] rounded-24 object-cover" />
       <div class="flex-1">
-        <h1 class="text-[22px] font-bold mb-2">Name Surname</h1>
+        <h1 class="text-[28px] font-bold mb-2">Name Surname</h1>
         <p class="text-[16px] leading-[24px] text-[#4A4A4A]">
           I am a passionate and dedicated software developer with a strong foundation in JavaScript and React.
           With hands-on experience in building dynamic and responsive web applications, I excel at transforming
@@ -37,29 +35,30 @@
 
     <!-- PROFICIENCY & SKILLS -->
     <section class="flex flex-col sm:flex-row gap-6">
+      
       <!-- Proficiency -->
       <div class="bg-white p-6 rounded-12 shadow-light flex-1">
         <h2 class="text-xl font-semibold mb-4">Proficiency</h2>
         <ul class="space-y-4">
-          <li class="flex">
+          <li class="flex items-center">
             <span class="w-1/4 text-sm font-medium">JavaScript</span>
             <div class="h-[6px] bg-[#ddd] rounded-6 flex-1 ml-4 overflow-hidden">
               <div class="h-full bg-[#396B5E] w-[90%]"></div>
             </div>
           </li>
-          <li class="flex">
+          <li class="flex items-center">
             <span class="w-1/4 text-sm font-medium">React</span>
             <div class="h-[6px] bg-[#ddd] rounded-6 flex-1 ml-4 overflow-hidden">
-              <div class="h-full bg-[#396B5E] w-[60%]"></div>
+              <div class="h-full bg-[#396B5E] w-[85%]"></div>
             </div>
           </li>
-          <li class="flex">
+          <li class="flex items-center">
             <span class="w-1/4 text-sm font-medium">Node.js</span>
             <div class="h-[6px] bg-[#ddd] rounded-6 flex-1 ml-4 overflow-hidden">
-              <div class="h-full bg-[#396B5E] w-[40%]"></div>
+              <div class="h-full bg-[#396B5E] w-[65%]"></div>
             </div>
           </li>
-          <li class="flex">
+          <li class="flex items-center">
             <span class="w-1/4 text-sm font-medium">HTML + CSS</span>
             <div class="h-[6px] bg-[#ddd] rounded-6 flex-1 ml-4 overflow-hidden">
               <div class="h-full bg-[#396B5E] w-[95%]"></div>
@@ -67,6 +66,7 @@
           </li>
         </ul>
       </div>
+
       <!-- Skills -->
       <div class="bg-white p-6 rounded-12 shadow-light flex-1">
         <h2 class="text-xl font-semibold mb-4">Skills</h2>
@@ -75,123 +75,111 @@
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Agile</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">UI Design</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Problem Solving</span>
-          <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Git And Version Control</span>
+          <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Git & Version Control</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Web Development</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Team Collaboration</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">Functional Programming</span>
           <span class="bg-[#ECF4F1] px-4 py-2 rounded-6 text-sm font-medium">RESTful APIs</span>
         </div>
       </div>
+
     </section>
 
     <!-- PROJECTS -->
-    <section>
+    <section class="space-y-6">
       <h2 class="text-xl font-semibold mb-4">Projects</h2>
-      <div class="bg-white p-6 rounded-12 shadow-light">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <!-- Featured -->
-          <div class="relative bg-[#2E6E5B] text-white p-4 rounded-12 h-[360px]">
-            <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
-            <div class="text-sm mb-2">2025</div>
-            <h3 class="text-[18px] font-bold mb-2">Portfolio Website</h3>
-            <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Developed a personal portfolio website to showcase projects and skills.</p>
-            <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, JavaScript, HTML, CSS</p>
-          </div>
-          <!-- Podcast -->
-          <div class="relative bg-[#ECF4F1] p-4 rounded-12 h-[360px]">
-            <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
-            <div class="text-sm mb-2">2025</div>
-            <h3 class="text-[18px] font-bold mb-2">Podcast App</h3>
-            <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Developed a podcast application that allows users to search, subscribe, and listen to various podcasts.</p>
-            <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
-          </div>
-          <!-- Agile Board -->
-          <div class="relative bg-[#ECF4F1] p-4 rounded-12 h-[360px]">
-            <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
-            <div class="text-sm mb-2">2025</div>
-            <h3 class="text-[18px] font-bold mb-2">Agile Board</h3>
-            <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Created a task management tool for organizing and tracking tasks.</p>
-            <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
-          </div>
-          <!-- Super Cool -->
-          <div class="relative bg-[#ECF4F1] p-4 rounded-12 h-[360px]">
-            <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
-            <div class="text-sm mb-2">2026</div>
-            <h3 class="text-[18px] font-bold mb-2">Super Cool Project</h3>
-            <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Developed an incredible application that allows users to do amazing things.</p>
-            <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, Tailwind, HTML, CSS</p>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Cards -->
+        <div class="relative bg-[#2E6E5B] text-white p-4 rounded-12 h-[360px]">
+          <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
+          <div class="text-sm mb-2">2025</div>
+          <h3 class="text-[18px] font-bold mb-2">Portfolio Website</h3>
+          <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Developed a personal portfolio website.</p>
+          <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, JavaScript, HTML, CSS</p>
         </div>
+
+        <div class="relative bg-[#ECF4F1] text-black p-4 rounded-12 h-[360px]">
+          <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
+          <div class="text-sm mb-2">2025</div>
+          <h3 class="text-[18px] font-bold mb-2">Podcast App</h3>
+          <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Built a podcast application.</p>
+          <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, TailwindCSS</p>
+        </div>
+
+        <div class="relative bg-[#ECF4F1] text-black p-4 rounded-12 h-[360px]">
+          <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
+          <div class="text-sm mb-2">2025</div>
+          <h3 class="text-[18px] font-bold mb-2">Agile Board</h3>
+          <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Created a task management tool.</p>
+          <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+        </div>
+
+        <div class="relative bg-[#ECF4F1] text-black p-4 rounded-12 h-[360px]">
+          <div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-[#D9534F]"></div>
+          <div class="text-sm mb-2">2026</div>
+          <h3 class="text-[18px] font-bold mb-2">Super Cool Project</h3>
+          <p class="text-[14px] leading-[18px] mb-2"><strong>Brief:</strong> Built an amazing app with incredible features.</p>
+          <p class="text-[14px] leading-[18px]"><strong>Technologies:</strong> React, TailwindCSS</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- EDUCATION & TOOLS -->
-    <section class="flex flex-wrap gap-6">
+    <!-- TOOLS & EDUCATION -->
+    <section class="flex flex-col lg:flex-row gap-6">
+      
+      <!-- Tools -->
+      <div class="bg-white p-6 rounded-12 shadow-light flex-1">
+        <h2 class="text-xl font-semibold mb-4">Tools</h2>
+        <ul class="list-disc pl-5 text-[14px] leading-6">
+          <li>Git</li>
+          <li>VS Code</li>
+          <li>Docker</li>
+          <li>Figma</li>
+          <li>Webpack</li>
+        </ul>
+      </div>
+
       <!-- Education -->
-      <div class="flex-1 bg-white p-6 rounded-12 shadow-light">
+      <div class="bg-white p-6 rounded-12 shadow-light flex-1">
         <h2 class="text-xl font-semibold mb-4">Education</h2>
         <div class="space-y-4">
-          <!-- Most Recent -->
-          <div class="relative bg-[#2E6E5B] text-white p-4 rounded-12 h-[160px]">
-            <span class="absolute top-3 right-3 bg-[#D9534F] text-[12px] px-2 py-1 rounded-6">Most Recent</span>
-            <div class="text-[14px]">Aug. 2025 – Mar. 2026</div>
-            <h3 class="text-[18px] font-bold">CodeSpace Academy</h3>
-            <p class="text-[14px] leading-[20px] mb-2">Software Development • Full-time</p>
-            <ul class="list-disc pl-5 text-[12px] leading-[18px] space-y-1">
-              <li>Focused on React and JavaScript to build intuitive, dynamic web applications</li>
-              <li>Collaborated with peers on real-world personal projects, refining teamwork and coding best practices</li>
-              <li>Gained hands-on experience with cutting-edge web technologies and development tools</li>
-            </ul>
-          </div>
-          <!-- Others... -->
-        </div>
-      </div>
-      <!-- Tools -->
-      <div class="flex-1 bg-white p-6 rounded-12 shadow-light">
-        <h2 class="text-xl font-semibold mb-4">Tools</h2>
-        <div class="space-y-4">
-          <ul class="list-disc pl-5 text-[14px]">
-            <li>Git</li>
-            <li>VS Code</li>
-            <li>Docker</li>
-            <li>Figma</li>
-            <li>Webpack</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <h2 class="text-xl font-semibold mb-4">Experience</h2>
-      <div class="space-y-4">
-        <!-- Most Recent -->
-        <div class="relative bg-[#2E6E5B] text-white p-4 rounded-12 h-[96px] flex items-center justify-between">
           <div>
-            <div class="text-[14px]">Aug. 2024 – July 2025</div>
-            <h3 class="text-[18px] font-bold">Bookstore Clerk</h3>
-            <div class="text-[12px] leading-[18px]">Readers’ Haven | Full-time</div>
+            <h3 class="font-bold text-[18px]">CodeSpace Academy</h3>
+            <p class="text-[14px] text-[#4A4A4A]">Aug. 2025 – Mar. 2026</p>
+            <p class="text-[14px] leading-5">Software Development • Full-time. Focused on React and JavaScript web development projects.</p>
           </div>
-          <span class="bg-[#D9534F] text-[12px] px-3 py-1 rounded-6">Most Recent</span>
+          <div>
+            <h3 class="font-bold text-[18px]">CPUT</h3>
+            <p class="text-[14px] text-[#4A4A4A]">Feb. 2019 – Dec. 2022</p>
+            <p class="text-[14px] leading-5">Mechanical Engineering: Systems, Product Design, and Prototyping.</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-[18px]">Hudson Park High</h3>
+            <p class="text-[14px] text-[#4A4A4A]">Jan. 2014 – Dec. 2018</p>
+            <p class="text-[14px] leading-5">Completed Matric with a focus on problem-solving and analytical thinking.</p>
+          </div>
         </div>
-        <!-- Other entries... -->
       </div>
+
     </section>
 
     <!-- FOOTER -->
-    <footer class="mt-10 bg-[#dc5d2e] text-white p-6 rounded-12 text-center">
+    <footer class="bg-[#dc5d2e] text-white p-6 rounded-12 text-center mt-10">
       <p class="text-[16px] font-semibold mb-2">Let’s chat! I’m ready to work on exciting projects.</p>
       <div class="text-[14px] space-x-4">
         <a href="mailto:namesurname@email.com">namesurname@email.com</a>
         <span>|</span>
         <a href="tel:0723456789">072 345 6789</a>
         <span>|</span>
-        <a href="#">LinkedIn Link</a>
+        <a href="#">LinkedIn</a>
         <span>|</span>
-        <a href="#">GitHub Link</a>
+        <a href="#">GitHub</a>
       </div>
     </footer>
 
   </div>
+
 </body>
 </html>
